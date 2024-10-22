@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 //import org.junit.Before;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
@@ -37,11 +38,11 @@ public class CustomListTest {
 
     @Test
     void testHasCity() {
-        CityList cityList = mockCityList();
+        list = MockCityList();
         City city = new City("Regina", "Saskatchewan");
-        assertFalse(cityList.hasCity(city));
-        cityList.add(city);
-        assertTrue(cityList.hasCity(city));
+        assertFalse(list.hasCity(city));
+        list.addCity(city);
+        assertTrue(list.hasCity(city));
     }
 
 }
